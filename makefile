@@ -6,7 +6,7 @@ CC = gcc ${CFLAGS}
 
 LIB = -lncurses
 
-EXE = dbclock
+EXE = cbclock
 
 all: ${EXE}
 
@@ -17,16 +17,16 @@ clean:
 	rm -f *.o
 	rm -f ${EXE}
 
-dbclock: dbc_main.o dbc_data.o dbc_util.o
+cbclock: cbc_main.o cbc_data.o cbc_util.o
 	${CC} -o $@ $^ ${LIB}
 
-dbc_main.o: dbc_main.c dbclock.h
+cbc_main.o: cbc_main.c cbclock.h
 	${CC} -o $@ -c $< ${LIB}
 
-dbc_data.o: dbc_data.c dbclock.h
+cbc_data.o: cbc_data.c cbclock.h
 	${CC} -o $@ -c $<
 
-dbc_util.o: dbc_util.c dbclock.h
+cbc_util.o: cbc_util.c cbclock.h
 	${CC} -o $@ -c $< ${LIB}
 
 

@@ -1,7 +1,7 @@
-dbclock -- uses ncurses to display the date and time centered in your terminal.
+cbclock -- uses ncurses to display the date and time centered in your terminal.
 
 Usage:
- $ dbclock
+ $ cbclock
  exit with F2
 
 Requirements:
@@ -11,15 +11,15 @@ Requirements:
 Build:
     $ make
 
- * if you want to add dbclock to your PATH:
+ * if you want to add cbclock to your PATH:
     $ [sudo] make install
  * defaults to installing to $HOME/bin
 
  * if you don't have make:
-    $ gcc -o dbc_main.o -c dbc_main.c -lncurses
-    $ gcc -o dbc_util.o -c dbc_util.c -lncurses
-    $ gcc -o dbc_data.o -c dbc_data.c
-    $ gcc -o dbclock dbc_main.o dbc_util.o dbc_data.o
+    $ gcc -o cbc_main.o -c cbc_main.c -lncurses
+    $ gcc -o cbc_util.o -c cbc_util.c -lncurses
+    $ gcc -o cbc_data.o -c cbc_data.c
+    $ gcc -o cbclock cbc_main.o cbc_util.o cbc_data.o
 
 
 
